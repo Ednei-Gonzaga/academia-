@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="plano.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="header">
+            <!-- Logo da empresa -->
+            <div class="logo">
+                <img src="imagens/logo.png" alt="">
+            </div>
+
+            <!-- Botão para abrir o menu flutuante -->
+            <div class="menu">
+                <button onclick="abrirMenu()" style="border: none; background: none;" id="menu">
+                    <i class="fa-solid fa-bars fa-4x" style="color: #f25621;"></i>
+                </button>
+            </div>
+
+            <!-- Menu flutuante que aparece quando o botão do menu é clicado -->
+            <div class="menu_flutuante">
+                <nav class="link">
+                    <div class="fecharMenu">
+                        <!-- Nome da empresa -->
+                        <h1 style="font-size: 30px; margin-right: 40px;color: #fe4d01;">FOCUSFIT</h1>
+                        <!-- Botão para fechar o menu flutuante -->
+                        <button onclick="fecharMenu()" id="btnMenuFechar">
+                            <i class="fa-solid fa-xmark fa-2x" style="color: #fe4d01;"></i>
+                        </button>
+                    </div>
+                    <!-- Links de navegação -->
+                    <div class="opcoes">
+                        <a href="../index pagina/index.php" class="tag_A">HOME</a>
+                        <a href="../login.html/login.php" class="tag_A">LOGIN</a>
+                    </div>
+                    <div class="corFinal"></div>
+                </nav>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Texto introdutório sobre os planos -->
+        <div class="textoPlanos">
+            <h1>NOSSOS PLANOS:</h1>
+            <h2>Escolha qual é o ideal para você!</h2>
+        </div>
+
+        <!-- Seção contendo os planos disponíveis -->
+        <div class="ofertas">
+            <!-- Plano Básico -->
+            <div class="p1">
+                <h1>Plano Básico</h1>
+                <h1 id="preco">R$ 79<small>/mês</small></h1>
+                <div id="textoPlanos">
+                    <i class="fa-regular fa-circle-check fa-2x" style="color: #63E6BE;"></i>
+                    <p>Acesso às áreas principais</p>
+                </div>
+
+                <div id="textoPlanos">
+                    <i class="fa-regular fa-circle-check fa-2x" style="color: #63E6BE;"></i>
+                    <p>Aulas coletivas e Avaliação física</p>
+                </div>
+
+                <div id="textoPlanos">
+                    <i class="fa-regular fa-circle-check fa-2x" style="color: #63E6BE;"></i>
+                    <p>Treino personalizado </p>
+                </div>
+
+                <a href="../matricula/matricula.php" id="btnComecar">COMEÇAR AGORA</a>
+            </div>
+
+            <!-- Plano Premium -->
+            <div class="p2">
+                <h1>Plano Premium</h1>
+                <h1 id="preco">R$ 109<small>/mês</small></h1>
+                <div id="textoPlanos">
+                    <i class="fa-regular fa-circle-check fa-2x" style="color: #63E6BE;"></i>
+                    <p>Todos os benefícios do Plano Básico.</p>
+                </div>
+
+                <div id="textoPlanos">
+                    <i class="fa-regular fa-circle-check fa-2x" style="color: #63E6BE;"></i>
+                    <p>Acesso a áreas exclusivas</p>
+                </div>
+
+                <div id="textoPlanos">
+                    <i class="fa-regular fa-circle-check fa-2x" style="color: #63E6BE;"></i>
+                    <p>Aulas exclusivas e Nutricionista</p>
+                </div>
+
+                <!-- Elemento repetido desnecessariamente (pode ser removido ou modificado) -->
+                <div id="textoPlanos">
+                    <i class="fa-regular fa-circle-check fa-2x" style="color: #63E6BE;"></i>
+                    <p>Personal Trainer</p>
+                </div>
+
+                <a href="../matricula/matricula.php" id="btnComecar">COMEÇAR AGORA</a>
+                <p id="flutuante">RECOMENDADO</p>
+            </div>
+
+            <!-- Plano Master-Pro -->
+            <div class="p3">
+                <h1>Plano Master-pro</h1>
+                <h1 id="preco">R$ 169<small>/mês</small></h1>
+                <div id="textoPlanos">
+                    <i class="fa-regular fa-circle-check fa-2x" style="color: #63E6BE;"></i>
+                    <p>Todos os benefícios do Plano Premium.</p>
+                </div>
+
+                <div id="textoPlanos">
+                    <i class="fa-regular fa-circle-check fa-2x" style="color: #63E6BE;"></i>
+                    <p>Sessões ilimitadas com Personal Trainer</p>
+                </div>
+
+                <div id="textoPlanos">
+                    <i class="fa-regular fa-circle-check fa-2x" style="color: #63E6BE;"></i>
+                    <p>Acesso VIP e Convites para convidados </p>
+                </div>
+
+                <!-- Elemento repetido desnecessariamente (pode ser removido ou modificado) -->
+                <div id="textoPlanos">
+                    <i class="fa-regular fa-circle-check fa-2x" style="color: #63E6BE;"></i>
+                    <p>Acompanhamento médico</p>
+                </div>
+
+                <a href="../matricula/matricula.php" id="btnComecar">COMEÇAR AGORA</a>
+            </div>
+        </div>
+
+        <!-- Botão de contato via WhatsApp -->
+        <div>
+            <a href="https://api.whatsapp.com/send?phone=5561998673818&text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20a%20FOCUSFIT." 
+            class="Zap">
+                <i class="fa-brands fa-whatsapp fa-2x" style="color: #ffffff;"></i>
+                <p>Fale Conosco!!</p>
+            </a>
+        </div>
+    </main>
+
+    <script>
+        // Função para abrir o menu flutuante
+        function abrirMenu() {
+            let button = document.querySelector(".menu_flutuante");
+            button.style.display = "block";
+        }
+
+        // Função para fechar o menu flutuante
+        function fecharMenu() {
+            let button = document.querySelector(".menu_flutuante");
+            button.style.display = "none";
+        }
+    </script>
+</body>
+
+
+</html>

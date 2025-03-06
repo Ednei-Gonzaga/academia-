@@ -1,0 +1,293 @@
+
+*{
+    margin: 0px;
+}
+
+body{
+    background-color: black;
+}
+
+:root{
+    --color-primary:#ff914d;
+}
+
+/*PARTE DO CABEÇALHO*/
+.header{
+  
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    height: 150px;
+}
+.logo{
+    font-size: 40px;
+    display: flex;
+    align-self: center;
+    color: var(--color-primary);
+   
+    margin-left: 80px;    
+}
+.logo img{
+    margin-right:20px;
+}
+
+/*PARTE DO Menu DINAMICO*/
+
+.menu{
+    text-align: right;
+    align-self: center;
+    margin-right: -50px;  
+}
+
+#iconMenu_Mobile{
+    display: none;
+}
+.menu_flutuante{
+    width: 500px;
+    background-color: black;
+    height:360px;
+    position: absolute;
+    right: 0px;
+    display: none;
+
+}
+.fecharMenu{
+    background-color: rgb(74, 62, 62);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fecharMenu h1{
+    margin-left: 30px;
+}
+#btnMenuFechar{
+    border: none;
+    text-align: right;
+    width: 40px;
+    background:none;
+    margin-right: 30px;
+}
+
+.opcoes{
+    display: grid;
+    justify-content: center;
+    max-width:500px ;  
+}
+.opcoes a{
+    text-decoration: none;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    padding-bottom:20px ;
+    padding-top:20px ;
+    width: 500px;
+}
+.opcoes a:hover{
+   background-color: rgb(100, 97, 97);
+}
+
+.corFinal{
+    background-color: rgb(74, 62, 62);
+    height: 70px;
+}
+
+
+/*PARTE DO CORPO1*/
+
+.corpo_login{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+.imagem_login{
+    margin-top: -60px;
+    margin-right: -80px;
+}
+
+.login_matricula{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    max-width: 400px;
+    text-align: center;
+    margin-right: 40px;
+}
+.login_matricula h1{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.login_matricula p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.senha{
+    background-color: darkgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    width: 350px;
+}
+
+.senha:focus-within{
+    border:3px solid #f25621;
+}
+
+input{
+    background: none;
+    height: 60px;
+    width: 250px;
+    font-size: 20px;
+    border: none;
+    margin-left: 10px;
+}
+input:focus{
+    border: none;
+    outline: none;
+}
+
+button,#tag_a{
+    height: 60px;
+    width: 350px;
+    border:3px solid var(--color-primary);
+    border-radius: 20px;
+    background-color: rgb(68, 60, 60);
+    color: var(--color-primary);
+    font-size: 20px;
+    align-self: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+    
+}
+#tag_a{
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button:hover, #tag_a:hover{
+    background-color: #000000;
+}
+
+/*TELAS media query*/
+
+
+@media (min-width:580px)  and (max-width:1024px){
+     .imagem_login img{
+        display: none;
+     }
+     .corpo_login{
+        justify-content: center;
+     }
+     .login_matricula{
+        margin: 0px;
+     }
+     .login_matricula{
+           background-color: #1d1c1c;
+           padding: 60px;
+           border-radius: 20px;
+           animation: pisca 2s alternate infinite;
+           margin: 25px 0px 25px 90px;
+     }
+     
+     @keyframes pisca{
+        from{
+            box-shadow: 1px 1px 5px  var(--color-primary); ;
+        }
+        to{
+            box-shadow: 1px 1px 20px  var(--color-primary);
+        }
+     }
+
+     #iconMenu_Mobile{
+        display: inline;
+    }
+    #iconMenu{
+        display: none;
+    }
+    .logo img{
+        width: 230px;
+    }
+    .logo{
+        margin-left: 40px;
+    }
+}
+
+/*Mobile tela*/
+@media (max-width:579px){
+    
+    /*Menu e logo*/
+    #iconMenu_Mobile{
+        display: inline;
+    }
+    #iconMenu{
+        display: none;
+    }
+    .logo img{
+        width: 200px;
+    }
+
+    .logo{
+        margin-left: 20px;
+        margin-right: -80px;
+        margin-top: -20px;
+    }
+    
+    
+    /*TIRANDO IMAGRM E CENTRALIZANDO LOGIN*/
+    .imagem_login img{
+        display: none;
+     }
+     .imagem_login img{
+        display: none;
+     }
+     .corpo_login{
+        justify-content: center;
+     }
+     .login_matricula{
+        margin: 0px;
+     }
+     .login_matricula{
+           background-color: #1d1c1c;
+           padding: 20px;
+           border-radius: 20px;
+           animation: pisca 2s alternate infinite;
+           margin: -25px 0px 25px 90px;
+     }
+     
+     @keyframes pisca{
+        from{
+            box-shadow: 1px 1px 5px  var(--color-primary); ;
+        }
+        to{
+            box-shadow: 1px 1px 20px  var(--color-primary);
+        }
+     }
+
+     /*AJUNTANDO TEXTOS E BOTOES*/
+    .login_matricula {
+        width: 290px;
+   }
+    .login_matricula h1{
+         font-size: 25px;
+    }
+
+    .login_matricula p{
+        font-size: 18px;
+   }
+
+   .senha{
+    width: 250px;
+   }
+   .senha input{
+    width: 200px;
+   }
+   button,#tag_a{
+    width: 250px;
+   }
+}
